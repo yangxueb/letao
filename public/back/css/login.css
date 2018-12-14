@@ -1,0 +1,20 @@
+/*
+ * @Author: yangxb 
+ * @Date: 2018-12-14 18:56:38 
+ * @Last Modified by: yangxb
+ * @Last Modified time: 2018-12-14 19:03:13
+ */
+body {
+  background-color: #222D32;
+}
+
+.login {
+  margin-top: 150px;
+}
+
+.panel .panel-title {
+  text-align: center;
+  font-size: 20px;
+  height: 40px;
+  line-height: 40px;
+}

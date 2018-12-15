@@ -2,7 +2,7 @@
  * @Author: yangxb 
  * @Date: 2018-12-14 19:01:44 
  * @Last Modified by: yangxb
- * @Last Modified time: 2018-12-15 16:38:40
+ * @Last Modified time: 2018-12-15 16:45:48
  */
 $(function () {
   // 表单校验功能
@@ -70,7 +70,7 @@ $(function () {
       dataType: 'json',
       success: function (info) {
         if (info.success) {
-          // location.assign('index.html');
+          location.assign('index.html');
         }
         if (info.error == 1000) {
           validator.updateStatus('username', 'INVALID', 'callback');

@@ -2,7 +2,7 @@
  * @Author: yangxb 
  * @Date: 2018-12-15 20:47:11 
  * @Last Modified by: yangxb
- * @Last Modified time: 2018-12-15 21:10:20
+ * @Last Modified time: 2018-12-16 11:09:44
  */
 $(function () {
   // 柱状图
@@ -16,7 +16,7 @@ $(function () {
       },
       tooltip: {},
       legend: {
-          data:['人数']
+          data:['人数', '销量']
       },
       xAxis: {
           data: ["1月","2月","3月","4月","5月","6月"]
@@ -26,7 +26,11 @@ $(function () {
           name: '人数',
           type: 'bar',
           data: [600, 500, 1500, 1800, 900, 800]
-      }]
+      }, {
+        name: '销量',
+        type: 'bar',
+        data: [788, 478, 1200, 1753, 1456, 977]
+    }]
   };
 
   // 使用刚指定的配置项和数据显示图表。

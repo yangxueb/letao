@@ -2,7 +2,11 @@
  * @Author: yangxb 
  * @Date: 2018-12-14 19:01:44 
  * @Last Modified by: yangxb
+<<<<<<< HEAD
  * @Last Modified time: 2018-12-15 16:45:48
+=======
+ * @Last Modified time: 2018-12-15 17:20:19
+>>>>>>> index
  */
 $(function () {
   // 表单校验功能

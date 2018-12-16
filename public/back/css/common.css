@@ -1,0 +1,119 @@
+/*
+ * @Author: yangxb 
+ * @Date: 2018-12-15 16:52:39 
+ * @Last Modified by: yangxb
+ * @Last Modified time: 2018-12-15 20:47:26
+ */
+/* 通用样式 */
+ a:link,
+ a:visited,
+ a:hover,
+ a:active {
+   text-decoration: none;
+ }
+ img {
+   width: 100%;
+   display: block;
+   border: 0;
+ }
+ ul {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+ }
+/* 左侧菜单栏 */
+.aside {
+  position: fixed;
+  width: 180px;
+  height: 100%;
+  background-color: #222D32;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transition: 1s;
+}
+.aside.hidemenu {
+  left: -180px;
+}
+.aside .brand {
+  height: 50px;
+  background-color:#367FA9;
+  line-height: 50px;
+  text-align: center;
+}
+.aside .brand a {
+  color: #fff;
+  font-size: 24px;
+}
+.aside .user {
+  padding-top: 30px;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  height: 180px;
+}
+.aside .user img {
+  width: 80px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.aside .user p {
+  height: 40px;
+  line-height: 40px;
+}
+.aside .nav a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  padding-left: 40px;
+  border-left: 3px solid transparent;
+}
+.aside a.current {
+  background-color: #1D1F21;
+  border-left: 3px solid #006699;
+}
+.aside .nav i {
+  margin-right: 5px;
+}
+.aside .child {
+  display: none;
+}
+.aside .child a {
+  padding-left: 60px;
+}
+/* 右侧主体内容 */
+.main {
+  padding: 70px 0 0 180px;
+  z-index: 666;
+  transition: 1s;
+}
+.main.hidemenu {
+  padding-left: 0;
+}
+/* 头部菜单栏 */
+.header {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  padding-left: 180px;
+  background-color: #3C8DBC;
+  top: 0;
+  left: 0;
+  transition: 1s;
+}
+.header.hidemenu {
+  padding-left: 0;
+}
+.header a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-size: 18px;  
+}
+.red {
+  color: #A94442;
+}

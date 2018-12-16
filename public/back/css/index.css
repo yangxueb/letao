@@ -1,0 +1,11 @@
+/*
+ * @Author: yangxb 
+ * @Date: 2018-12-15 20:47:36 
+ * @Last Modified by: yangxb
+ * @Last Modified time: 2018-12-15 21:00:55
+ */
+ .histogram,
+ .pie {
+   width: 48%;
+   height: 400px;
+ }

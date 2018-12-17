@@ -2,7 +2,7 @@
  * @Author: yangxb 
  * @Date: 2018-12-15 16:52:39 
  * @Last Modified by: yangxb
- * @Last Modified time: 2018-12-15 20:47:26
+ * @Last Modified time: 2018-12-17 14:36:53
  */
 /* 通用样式 */
  a:link,
@@ -101,6 +101,7 @@
   top: 0;
   left: 0;
   transition: 1s;
+  z-index: 666;
 }
 .header.hidemenu {
   padding-left: 0;

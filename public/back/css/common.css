@@ -2,7 +2,7 @@
  * @Author: yangxb 
  * @Date: 2018-12-15 16:52:39 
  * @Last Modified by: yangxb
- * @Last Modified time: 2018-12-17 15:17:17
+ * @Last Modified time: 2018-12-17 16:37:34
  */
 /* 通用样式 */
  a:link,
@@ -117,6 +117,9 @@
 }
 .red {
   color: #A94442;
+}
+.mt_20 {
+  margin-top: 20px;
 }
 /* 表格内容水平垂直居中样式 */
 .table.table-bordered th,

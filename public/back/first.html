@@ -46,11 +46,29 @@
     <div class="container-fluid">
       <ol class="breadcrumb">
         <li><a href="index.html">管理系统</a></li>
-        <li class="active">首页</li>
+        <li class="active">分类管理</li>
+        <li class="active">一级分类</li>
       </ol>
+      <div class="content">
+        <div class="btn btn-default" id="addBtn">添加分类</div>
+        <table class="table table-bordered table-hover mt_20">
+          <thead>
+            <tr>
+              <th style="width: 20%;">序号</th>
+              <th style="width: 80%;">一级分类名</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+          </tbody>
+        </table>
+        <div class="pull-right">
+          <ul id="pagintor"></ul>
+        </div>
+      </div>
     </div>
   </div>
-  <!-- 弹出框 -->
+  <!-- 退出登录弹出框 -->
   <div class="modal fade" id="myModal" tabindex="-1">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
@@ -68,12 +86,46 @@
       </div>
     </div>
   </div>
+  <!-- 一级分类列表模板 -->
+  <script type="text/html" id="firstTmp">
+    {{each rows v i}}
+      <tr>
+        <td>{{i + 1 + (page - 1) * size}}</td>
+        <td>{{v.categoryName}}</td>
+      </tr>
+    {{/each}}
+  </script>
+  <!-- 用户状态修改模态框 -->
+  <div class="modal fade" id="addModal" tabindex="-1">
+    <form id="addForm">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">添加分类</h4>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <input type="text" name="categoryName" class="form-control" placeholder="请输入一级分类">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="submit" class="btn btn-primary" id="addSort">添加</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
   <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
   <script src="lib/nprogress/nprogress.js"></script>
+  <script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
   <script src="js/common.js"></script>
   <script src="js/isLogin.js"></script>
+  <script src="js/first.js"></script>
 </body>
 
 </html>

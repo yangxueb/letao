@@ -1,0 +1,48 @@
+/*
+ * @Author: yangxb 
+ * @Date: 2018-12-18 20:13:13 
+ * @Last Modified by: yangxb
+ * @Last Modified time: 2018-12-18 21:25:52
+ */
+/* 一级分类列表 */
+.category_left {
+  width: 90px;
+  height: 100%;
+  position: relative;
+  float: left;
+}
+.category_left a {
+  display: block;
+  width: 90px;
+  height: 50px;
+  background-color: #E3E4E5;
+  color: #666;
+  text-align: center;
+  line-height: 49px;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+ }
+.category_left a.current {
+  background-color: #fff;
+  border-right: 1px solid transparent;
+}
+/* 二级分类列表 */
+.category_right {
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+}
+.category_right a {
+  display: block;
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+.category_right a img {
+  width: 70px;
+  height: 50px;
+  margin: 0 auto;
+}
+.category_right .tips {
+  padding: 10px;
+}

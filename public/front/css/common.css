@@ -2,7 +2,7 @@
  * @Author: yangxb 
  * @Date: 2018-12-18 17:00:19 
  * @Last Modified by: yangxb
- * @Last Modified time: 2018-12-18 19:26:30
+ * @Last Modified time: 2018-12-18 20:04:33
  */
  html,
  body {
@@ -93,6 +93,12 @@
   text-align: center;
   color: #fff;
   padding-top: 8px;
+}
+.footer li a.current {
+  color: orange;
+}
+.footer li a.current p {
+  color: orange;
 }
 .footer li p {
   margin: 0;

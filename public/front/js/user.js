@@ -2,7 +2,7 @@
  * @Author: yangxb 
  * @Date: 2018-12-19 15:56:57 
  * @Last Modified by: yangxb
- * @Last Modified time: 2018-12-19 16:23:14
+ * @Last Modified time: 2018-12-19 16:58:43
  */
 $(function () {
   // 头部页面后退功能
@@ -20,6 +20,10 @@ $(function () {
     dataType: 'json',
     success: function (info) {
       console.log(info);
+      if (info.error == 400) {
+        location.assign('login.html');
+        return;
+      }
       var htmlStr = template('userTmp', info);
       $('.mui-media-body').html(htmlStr);
     }

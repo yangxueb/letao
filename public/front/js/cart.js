@@ -2,7 +2,7 @@
  * @Author: yangxb 
  * @Date: 2018-12-19 11:14:05 
  * @Last Modified by: yangxb
- * @Last Modified time: 2018-12-19 17:52:46
+ * @Last Modified time: 2018-12-19 19:38:22
  */
 $(function () {
   // 头部页面后退功能
@@ -15,19 +15,38 @@ $(function () {
     indicators: false, //是否显示滚动条
   });
   // 购物车列表渲染
-  $.ajax({
-    url: '/cart/queryCart',
-    dataType: 'json',
-    success: function (info) {
-      var obj = {
-        items: info
-      };
-      if (info.error == 400) {
-        location.assign('login.html?retUrl=' + location.href);
-        return;
+  render();
+  function render () {
+    $.ajax({
+      url: '/cart/queryCart',
+      dataType: 'json',
+      success: function (info) {
+        var obj = {
+          items: info
+        };
+        if (info.error == 400) {
+          location.assign('login.html?retUrl=' + location.href);
+          return;
+        }
+        var htmlStr = template('cartTmp', obj);
+        $('.mui-table-view').html(htmlStr);
       }
-      var htmlStr = template('cartTmp', obj);
-      $('.mui-table-view').html(htmlStr);
-    }
+    })
+  }
+  // 购物车商品删除功能
+  $('.mui-table-view').on('click', '.btn_delete', function () {
+    var id = $(this).data('id');
+    $.ajax({
+      url: '/cart/deleteCart',
+      data: {
+        id: [id]
+      },
+      dataType: 'json',
+      success: function (info) {
+        if (info.success) {
+          render();
+        }
+      }
+    })
   })
 })

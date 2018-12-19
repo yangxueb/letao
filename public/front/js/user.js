@@ -1,8 +1,8 @@
 /*
  * @Author: yangxb 
- * @Date: 2018-12-19 11:14:05 
+ * @Date: 2018-12-19 15:56:57 
  * @Last Modified by: yangxb
- * @Last Modified time: 2018-12-19 16:14:15
+ * @Last Modified time: 2018-12-19 16:23:14
  */
 $(function () {
   // 头部页面后退功能
@@ -14,16 +14,14 @@ $(function () {
     deceleration: 0.0005, //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
     indicators: false, //是否显示滚动条
   });
-  // 购物车列表渲染
+  // 用户列表渲染
   $.ajax({
-    url: '/cart/queryCart',
+    url: '/user/queryUserMessage',
     dataType: 'json',
     success: function (info) {
-      var obj = {
-        items: info
-      };
-      var htmlStr = template('cartTmp', obj);
-      $('.mui-table-view').html(htmlStr);
+      console.log(info);
+      var htmlStr = template('userTmp', info);
+      $('.mui-media-body').html(htmlStr);
     }
   })
 })

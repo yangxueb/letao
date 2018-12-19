@@ -2,7 +2,7 @@
  * @Author: yangxb 
  * @Date: 2018-12-18 19:24:37 
  * @Last Modified by: yangxb
- * @Last Modified time: 2018-12-18 19:47:58
+ * @Last Modified time: 2018-12-19 16:16:41
  */
 /* 导航部分 */
 .nav {
@@ -22,6 +22,7 @@
   border: 1px solid #ccc;
   padding: 10px;
   text-align: center;
+  margin-bottom: 10px;
 }
 .product li:nth-child(odd) {
   margin-right: 4%;

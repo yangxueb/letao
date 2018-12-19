@@ -2,7 +2,7 @@
  * @Author: yangxb 
  * @Date: 2018-12-19 11:14:05 
  * @Last Modified by: yangxb
- * @Last Modified time: 2018-12-19 16:14:15
+ * @Last Modified time: 2018-12-19 17:52:46
  */
 $(function () {
   // 头部页面后退功能
@@ -22,6 +22,10 @@ $(function () {
       var obj = {
         items: info
       };
+      if (info.error == 400) {
+        location.assign('login.html?retUrl=' + location.href);
+        return;
+      }
       var htmlStr = template('cartTmp', obj);
       $('.mui-table-view').html(htmlStr);
     }

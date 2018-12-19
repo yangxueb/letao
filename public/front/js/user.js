@@ -2,7 +2,7 @@
  * @Author: yangxb 
  * @Date: 2018-12-19 15:56:57 
  * @Last Modified by: yangxb
- * @Last Modified time: 2018-12-19 16:58:43
+ * @Last Modified time: 2018-12-19 17:58:08
  */
 $(function () {
   // 头部页面后退功能
@@ -27,5 +27,17 @@ $(function () {
       var htmlStr = template('userTmp', info);
       $('.mui-media-body').html(htmlStr);
     }
+  })
+  // 用户退出功能
+  $('#logout').on('click', function () {
+    $.ajax({
+      url: '/user/logout',
+      dataType: 'json',
+      success: function (info) {
+        if (info.success) {
+          location.assign('login.html');
+        }
+      }
+    })
   })
 })

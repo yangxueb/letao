@@ -1,0 +1,17 @@
+/*
+ * @Author: yangxb 
+ * @Date: 2018-12-20 21:49:09 
+ * @Last Modified by: yangxb
+ * @Last Modified time: 2018-12-20 22:02:39
+ */
+.header .search .mui-icon {
+  line-height: 45px;
+}
+.footer {
+  background-color: #EFEFF4;
+  border-top: 1px solid #f00;
+  padding: 10px;
+}
+.footer a {
+  padding: 5px;
+}

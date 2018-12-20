@@ -2,21 +2,9 @@
  * @Author: yangxb 
  * @Date: 2018-12-20 18:49:02 
  * @Last Modified by: yangxb
- * @Last Modified time: 2018-12-20 21:24:33
+ * @Last Modified time: 2018-12-20 21:38:01
  */
 $(function () {
-  // 获取地址栏参数
-  function getSearch (key) {
-    var search = decodeURI(location.search).slice(1);
-    var arr = search.split('&');
-    var obj = {};
-    arr.forEach(function (ele, index) {
-      var key = ele.split('=')[0];
-      var value = ele.split('=')[1];
-      obj[key] = value;
-    })
-    return obj[key];
-  }
   var keywods = getSearch('key');
   $('.search_input').val(keywods);
   // 搜索列表渲染
@@ -40,6 +28,7 @@ $(function () {
         data:params,
         dataType: 'json',
         success: function (info) {
+          console.log(info);
           var htmlStr = template('searchTmp', info);
           $('.product').html(htmlStr);
         }

@@ -2,7 +2,7 @@
  * @Author: yangxb 
  * @Date: 2018-12-20 15:09:49 
  * @Last Modified by: yangxb
- * @Last Modified time: 2018-12-20 18:32:51
+ * @Last Modified time: 2018-12-20 22:09:24
  */
 $(function () {
   // 历史记录列表渲染
@@ -56,5 +56,9 @@ $(function () {
     render();
     $('.search_input').val('');
     location.assign('searchList.html?key=' + item);
+  })
+  // 点击历史记录搜索商品
+  $('.history').on('click', '.search-history', function () {
+    location.assign('searchList.html?key=' + $(this).text());
   })
 })

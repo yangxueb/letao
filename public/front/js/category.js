@@ -2,14 +2,9 @@
  * @Author: yangxb 
  * @Date: 2018-12-18 20:14:27 
  * @Last Modified by: yangxb
- * @Last Modified time: 2018-12-18 21:33:28
+ * @Last Modified time: 2018-12-20 15:08:00
  */
 $(function () {
-  // 分类列表滚动效果
-  mui('.mui-scroll-wrapper').scroll({
-    deceleration: 0.0005, //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
-    indicators: false, //是否显示滚动条
-  });
   // 一级分类渲染功能
   $.ajax({
     url: '/category/queryTopCategory',

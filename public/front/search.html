@@ -9,35 +9,27 @@
   <link rel="stylesheet" href="lib/mui/css/mui.css">
   <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/category.css">
+  <link rel="stylesheet" href="css/search.css">
 </head>
 <body>
   <div class="container">
     <!-- 头部 -->
     <div class="header">
-      <a href="index.html" class="home"><i class="fa fa-home"></i></a>
-      <h3>乐淘云购</h3>
-      <a href="search.html" class="search"><i class="fa fa-search"></i></a>
+      <a href="javascript: history.back();" class="home"><i class="mui-icon mui-icon-back"></i></a>
+      <h3>搜索中心</h3>
     </div>
     <!-- 主体部分 -->
     <div class="main">
-      <!-- 一级分类列表 -->
-      <div class="category_left">
-        <div class="mui-scroll-wrapper">
-          <div class="mui-scroll">
-            <ul id="firstList">
-              
-            </ul>
+      <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+          <!-- 搜索框 -->
+          <div class="search">
+            <input type="text" class="search_input" placeholder="请输入搜索关键字">
+            <button class="search_btn mui-btn-primary">搜索</button>
           </div>
-        </div>
-      </div>
-      <!-- 二级分类列表 -->
-      <div class="category_right">
-        <div class="mui-scroll-wrapper">
-          <div class="mui-scroll">
-            <ul id="secondList">
-              
-            </ul>
+          <!-- 历史记录 -->
+          <div class="history">
+            
           </div>
         </div>
       </div>
@@ -49,7 +41,7 @@
           <i class="fa fa-home"></i>
           <p>首页</p>
         </a></li>
-        <li><a href="category.html" class="current">
+        <li><a href="category.html">
           <i class="fa fa-bars"></i>
           <p>分类页</p>
         </a></li>
@@ -64,23 +56,31 @@
       </ul>
     </div>
   </div>
-  <script type="text/html" id="firstTmp">
-    {{each rows v i}}
-      <li><a href="#" data-id="{{v.id}}">{{v.categoryName}}</a></li>
-    {{/each}}
-  </script>
-  <script type="text.html" id="secondTmp">
-    {{each rows v i}}
-      <li><a href="#">
-        <img src="{{v.brandLogo}}" alt="">
-        <p>{{v.brandName}}</p>
-      </a></li>
-    {{/each}}
+  <!-- 历史列表模板 -->
+  <script type="text/html" id="historyTmp">
+    {{if arr.length == 0}}
+      <p>没有更多数据了</p>
+    {{else}}
+      <div class="title mui-clearfix">
+        <span class="mui-pull-left">搜索历史</span>
+        <span class="mui-pull-right btn_empty"><i class="fa fa-trash"></i>清空记录</span>
+      </div>
+      <div class="content">
+        <ul>
+          {{each arr v i}}
+            <li>
+              <a href="#" class="mui-pull-left">{{v}}</a>
+              <i data-index="{{i}}" class="mui-pull-right mui-icon mui-icon-closeempty btn_delete"></i>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    {{/if}}
   </script>
   <script src="lib/zepto/zepto.min.js"></script>
-  <script src="lib/mui/js/mui.js"></script>
   <script src="lib/artTemplate/template-web.js"></script>
+  <script src="lib/mui/js/mui.js"></script>
   <script src="js/common.js"></script>
-  <script src="js/category.js"></script>
+  <script src="js/search.js"></script>
 </body>
 </html>

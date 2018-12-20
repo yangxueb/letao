@@ -2,7 +2,7 @@
  * @Author: yangxb 
  * @Date: 2018-12-18 17:00:19 
  * @Last Modified by: yangxb
- * @Last Modified time: 2018-12-18 20:04:33
+ * @Last Modified time: 2018-12-20 20:41:34
  */
  html,
  body {
@@ -67,6 +67,44 @@
   height: 100%;
   background-color: #fff;
   position: relative;
+}
+/* 导航部分 */
+.nav {
+  padding: 10px;
+}
+.nav li {
+  float: left;
+  width: 33.33%;
+}
+/* 商品部分 */
+.product {
+  padding: 10px;
+}
+.product li {
+  width: 48%;
+  float: left;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.product li:nth-child(odd) {
+  margin-right: 4%;
+}
+.product li img {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto;
+}
+.product li .title {
+  text-align: left;
+  height: 40px;
+}
+.product li .price span:first-child {
+  color: #f00;
+}
+.product li .price span:last-child {
+  text-decoration: line-through;
 }
 /* 底部 */
 .footer {

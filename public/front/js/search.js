@@ -2,7 +2,7 @@
  * @Author: yangxb 
  * @Date: 2018-12-20 15:09:49 
  * @Last Modified by: yangxb
- * @Last Modified time: 2018-12-20 16:58:52
+ * @Last Modified time: 2018-12-20 18:32:51
  */
 $(function () {
   // 历史记录列表渲染
@@ -55,5 +55,6 @@ $(function () {
     localStorage.setItem('search_list', JSON.stringify(arr));
     render();
     $('.search_input').val('');
+    location.assign('searchList.html?key=' + item);
   })
 })

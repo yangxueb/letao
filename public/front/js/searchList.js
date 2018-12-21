@@ -2,7 +2,7 @@
  * @Author: yangxb 
  * @Date: 2018-12-20 18:49:02 
  * @Last Modified by: yangxb
- * @Last Modified time: 2018-12-20 21:38:01
+ * @Last Modified time: 2018-12-21 17:14:08
  */
 $(function () {
   var keywods = getSearch('key');
@@ -17,7 +17,7 @@ $(function () {
       pageSize: 100
     }
     var current = $('.sort a.current');
-    if (current.length > 1) {
+    if (current.length > 0) {
       var sortName = current.data('type');
       var sortValue = current.children().hasClass('fa-angle-down') ? 2 : 1;
       params[sortName] = sortValue;
@@ -28,7 +28,6 @@ $(function () {
         data:params,
         dataType: 'json',
         success: function (info) {
-          console.log(info);
           var htmlStr = template('searchTmp', info);
           $('.product').html(htmlStr);
         }
@@ -53,7 +52,7 @@ $(function () {
     arr.unshift(item);
     localStorage.setItem('search_list', JSON.stringify(arr));
     render();
-    $('.search_input').val('');
+    // $('.search_input').val('');
   })
   // 搜索方式特效
   $('.sort a[data-type]').on('click', function () {
@@ -62,6 +61,6 @@ $(function () {
     } else {
       $(this).addClass('current').siblings().removeClass('current');
     }
+    render();
   })
-  render();
 })
